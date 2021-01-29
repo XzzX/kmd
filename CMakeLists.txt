@@ -7,12 +7,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(Kokkos REQUIRED)
 
-add_executable(kmd
-        src/main.cpp)
-target_compile_options(kmd PRIVATE
-        -Wall
-        -Wextra
-        -Wunreachable-code
-        -Wuninitialized
-        -Wshadow)
-target_link_libraries(kmd PRIVATE Kokkos::kokkos)
+add_subdirectory(src)
