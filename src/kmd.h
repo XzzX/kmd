@@ -48,6 +48,10 @@ struct ParticleVector
     }
 };
 
+void init_kmd();
+
+void finalize_kmd();
+
 void interact(ParticleVector& particles,
               const double spring_constant = 1.0,
               const double equilibrium_distance = 1.0,
@@ -63,3 +67,5 @@ void integrate(ParticleVector& particles,
 double dist(ParticleVector& particles,
             const size_t idx,
             const size_t idy);
+
+ParticleVector init_particles();
